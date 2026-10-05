@@ -1,0 +1,55 @@
+# VEYRA – Fashion & Accessories E-Commerce Website
+
+A full-stack fashion and accessories e-commerce web application developed as part of my **Thiranex Full Stack Development Internship – Task 3**.
+
+## Features
+
+- User registration and login
+- User authentication and authorization
+- Product catalog
+- Product categories
+- Add products to cart
+- Shopping cart management
+- Checkout system
+- Order placement
+- User order history
+- Admin product management
+- Admin order management
+- Role-based access control
+- MongoDB database integration
+- REST API integration
+- Responsive design
+
+## Technologies Used
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+
+### Database
+- MongoDB
+- Mongoose
+
+### Authentication
+- JSON Web Token (JWT)
+- bcrypt.js
+
+## Project Structure
+
+```text
+style-nest-ecommerce/
+│
+├── middleware/
+├── models/
+├── routes/
+├── public/
+├── server.js
+├── package.json
+├── package-lock.json
+├── .env.example
+└── README.md
