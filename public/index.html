@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="StyleNest - modern fashion and accessories store.">
+  <title>StyleNest | Fashion & Accessories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Small icon font-free icons keep the project self-contained. */
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <a class="brand" href="#home"><span class="brand-mark">⌁</span><span>Style<span>Nest</span></span></a>
+
+  <nav class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#categories">Categories</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button>
+    <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist">♡</button>
+    <button class="icon-btn cart-icon" id="cartBtn" aria-label="Cart">🛍<span id="cartCount">0</span></button>
+    <button class="account-btn" id="accountBtn">Account</button>
+  </div>
+</header>
+
+<div class="search-bar-wrap" id="searchBarWrap">
+  <div class="search-bar">
+    <input id="searchInput" type="search" placeholder="Search for dresses, shoes, bags...">
+    <button id="searchBtn">Search</button>
+  </div>
+</div>
+
+<main>
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <p class="eyebrow">YOUR STYLE · OUR PASSION</p>
+      <h1>Style<span>Nest</span></h1>
+      <p class="hero-subtitle">Trendy outfits · Premium quality · Made for every you</p>
+      <p class="hero-text">Discover everyday fashion, statement pieces and timeless accessories in one carefully curated collection.</p>
+      <a class="primary-btn" href="#shop">Shop the collection →</a>
+    </div>
+    <div class="hero-side-note">Dress<br><em>Like Your</em><br>Best Self.</div>
+  </section>
+
+  <section class="benefits">
+    <div><strong>🚚 Free Shipping</strong><small>On orders over ₹999</small></div>
+    <div><strong>↻ Easy Returns</strong><small>Hassle-free 7 days</small></div>
+    <div><strong>✓ Secure Checkout</strong><small>Safe demo payments</small></div>
+    <div><strong>◌ Support</strong><small>We're here to help</small></div>
+  </section>
+
+  <section id="categories" class="section">
+    <div class="section-heading">
+      <div><p class="eyebrow">EXPLORE</p><h2>Shop by Category</h2><p>Find the pieces that fit your style.</p></div>
+      <a href="#shop" class="text-link">View all →</a>
+    </div>
+    <div class="category-grid">
+      <button class="category-card" data-category="Tops & T-Shirts"><span>👕</span><b>Tops & T-Shirts</b><small>Everyday essentials</small></button>
+      <button class="category-card" data-category="Jeans & Trousers"><span>👖</span><b>Jeans & Trousers</b><small>Easy everyday fits</small></button>
+      <button class="category-card" data-category="Footwear"><span>👟</span><b>Footwear</b><small>Step up your look</small></button>
+      <button class="category-card" data-category="Bags"><span>👜</span><b>Bags</b><small>Carry it beautifully</small></button>
+      <button class="category-card" data-category="Watches"><span>⌚</span><b>Watches</b><small>Classic details</small></button>
+      <button class="category-card" data-category="Accessories"><span>🕶</span><b>Accessories</b><small>Complete the outfit</small></button>
+    </div>
+  </section>
+
+  <section id="shop" class="section shop-section">
+    <div class="section-heading">
+      <div><p class="eyebrow">CURATED FOR YOU</p><h2>Featured Products</h2><p>Fresh styles for your wardrobe.</p></div>
+    </div>
+
+    <div class="shop-toolbar">
+      <div id="categoryFilters" class="filters">
+        <button class="filter active" data-filter="All">All</button>
+        <button class="filter" data-filter="Tops & T-Shirts">Tops</button>
+        <button class="filter" data-filter="Jeans & Trousers">Jeans</button>
+        <button class="filter" data-filter="Footwear">Footwear</button>
+        <button class="filter" data-filter="Bags">Bags</button>
+        <button class="filter" data-filter="Watches">Watches</button>
+        <button class="filter" data-filter="Accessories">Accessories</button>
+      </div>
+      <select id="sortSelect">
+        <option value="default">Sort: Featured</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+        <option value="name">Name: A-Z</option>
+      </select>
+    </div>
+
+    <div id="productGrid" class="product-grid"></div>
+    <p id="emptyProducts" class="empty-state hidden">No products found. Add products from the Admin dashboard.</p>
+  </section>
+
+  <section id="about" class="story-section">
+    <div class="story-image"></div>
+    <div class="story-content">
+      <p class="eyebrow">OUR STORY</p>
+      <h2>Fashion should feel like you.</h2>
+      <p>StyleNest is a demo fashion marketplace created for a full-stack development project. The goal is simple: combine a clean shopping experience with the features of a real-world e-commerce application.</p>
+      <div class="story-points">
+        <span>01 <b>Curated styles</b></span>
+        <span>02 <b>Simple shopping</b></span>
+        <span>03 <b>Thoughtful details</b></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="orders" class="section hidden" >
+    <div class="section-heading"><div><p class="eyebrow">YOUR ACCOUNT</p><h2>My Orders</h2></div></div>
+    <div id="ordersList" class="orders-list"></div>
+  </section>
+
+  <section id="admin" class="section admin-section hidden">
+    <div class="section-heading"><div><p class="eyebrow">MANAGEMENT</p><h2>Admin Dashboard</h2><p>Manage products and customer orders.</p></div></div>
+
+    <div class="admin-stats">
+      <div><b id="adminProductCount">0</b><span>Total Products</span></div>
+      <div><b id="adminOrderCount">0</b><span>Total Orders</span></div>
+      <div><b id="adminPendingCount">0</b><span>Pending Orders</span></div>
+    </div>
+
+    <div class="admin-grid">
+      <div class="admin-card">
+        <div class="card-title"><h3>Add Product</h3><span>NEW</span></div>
+        <form id="productForm" class="form-grid">
+          <input name="name" placeholder="Product name" required>
+          <select name="category" required>
+            <option value="">Category</option>
+            <option>Tops & T-Shirts</option>
+            <option>Jeans & Trousers</option>
+            <option>Footwear</option>
+            <option>Bags</option>
+            <option>Watches</option>
+            <option>Accessories</option>
+          </select>
+          <input name="price" type="number" min="0" placeholder="Price ₹" required>
+          <input name="stock" type="number" min="0" placeholder="Stock" value="10" required>
+          <input name="image" placeholder="Image URL (optional)">
+          <input name="sizes" placeholder="Sizes: S,M,L,XL">
+          <input name="colors" placeholder="Colors: Black,White">
+          <textarea name="description" placeholder="Product description"></textarea>
+          <label class="check-row"><input name="featured" type="checkbox"> Feature this product</label>
+          <button class="primary-btn" type="submit">Add Product</button>
+        </form>
+        <p id="adminProductMsg" class="form-message"></p>
+      </div>
+
+      <div class="admin-card">
+        <div class="card-title"><h3>Product Management</h3><span>CATALOG</span></div>
+        <div id="adminProducts" class="admin-product-list"></div>
+      </div>
+    </div>
+
+    <div class="admin-card orders-admin-card">
+      <div class="card-title"><h3>Order Management</h3><span>ORDERS</span></div>
+      <div id="adminOrders" class="admin-orders"></div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section">
+    <div class="section-heading"><div><p class="eyebrow">GET IN TOUCH</p><h2>Contact StyleNest</h2><p>Questions about the store or project? Send a message.</p></div></div>
+    <div class="contact-grid">
+      <div>
+        <h3>Let's connect.</h3>
+        <p class="muted">StyleNest is a demonstration project with a complete frontend, backend APIs, authentication and MongoDB integration.</p>
+        <div class="contact-items">
+          <p><b>Email</b><br>stylenest.demo@example.com</p>
+          <p><b>Support</b><br>Mon – Sat · 9:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <input name="name" placeholder="Your name" required>
+        <input name="email" type="email" placeholder="Email address" required>
+        <textarea name="message" rows="5" placeholder="Your message" required></textarea>
+        <button class="primary-btn" type="submit">Send Message →</button>
+        <p id="contactMsg" class="form-message"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-brand"><a class="brand" href="#home"><span class="brand-mark">⌁</span><span>Style<span>Nest</span></span></a><p>Modern fashion. Thoughtful details.</p></div>
+  <div><b>Quick Links</b><a href="#home">Home</a><a href="#shop">Shop</a><a href="#categories">Categories</a><a href="#contact">Contact</a></div>
+  <div><b>Customer Service</b><span>FAQ</span><span>Shipping</span><span>Returns</span><span>Support</span></div>
+  <div><b>Newsletter</b><p>Get updates on new styles.</p><div class="newsletter"><input placeholder="Your email"><button>→</button></div></div>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<div id="authModal" class="modal hidden">
+  <div class="modal-backdrop"></div>
+  <div class="modal-box auth-box">
+    <button class="close-btn" data-close="authModal">×</button>
+    <div class="auth-header"><p class="eyebrow">WELCOME TO STYLENEST</p><h2 id="authTitle">Login</h2><p>Sign in to manage your orders and shopping cart.</p></div>
+    <div class="auth-tabs"><button class="auth-tab active" data-mode="login">Login</button><button class="auth-tab" data-mode="register">Create Account</button></div>
+    <form id="authForm" class="form-grid">
+      <input id="authName" name="name" placeholder="Full name" class="hidden">
+      <input id="authEmail" name="email" type="email" placeholder="Email address" required>
+      <input id="authPassword" name="password" type="password" placeholder="Password" minlength="6" required>
+      <button class="primary-btn" type="submit" id="authSubmit">Login</button>
+      <p id="authMsg" class="form-message"></p>
+    </form>
+  </div>
+</div>
+
+<div id="cartModal" class="modal hidden">
+  <div class="modal-backdrop"></div>
+  <div class="modal-box cart-box">
+    <button class="close-btn" data-close="cartModal">×</button>
+    <div class="auth-header"><p class="eyebrow">YOUR BAG</p><h2>Your Cart</h2></div>
+    <div id="cartItems"></div>
+    <div class="cart-summary">
+      <div><span>Subtotal</span><b id="cartSubtotal">₹0</b></div>
+      <div><span>Shipping</span><b id="cartShipping">Free</b></div>
+      <div class="cart-total"><span>Total</span><b id="cartTotal">₹0</b></div>
+    </div>
+    <button class="primary-btn full-btn" id="checkoutBtn">Proceed to Checkout</button>
+  </div>
+</div>
+
+<div id="productModal" class="modal hidden">
+  <div class="modal-backdrop"></div>
+  <div class="modal-box product-detail-box">
+    <button class="close-btn" data-close="productModal">×</button>
+    <div id="productDetail"></div>
+  </div>
+</div>
+
+<div id="checkoutModal" class="modal hidden">
+  <div class="modal-backdrop"></div>
+  <div class="modal-box checkout-box">
+    <button class="close-btn" data-close="checkoutModal">×</button>
+    <div class="auth-header"><p class="eyebrow">CHECKOUT</p><h2>Complete Your Order</h2><p>Demo checkout — no real payment is processed.</p></div>
+    <form id="checkoutForm" class="form-grid">
+      <input name="fullName" placeholder="Full name" required>
+      <input name="phone" placeholder="Phone number" required>
+      <input name="address" placeholder="Address" required>
+      <div class="two-col"><input name="city" placeholder="City" required><input name="state" placeholder="State" required></div>
+      <input name="pincode" placeholder="Pincode" required>
+      <select name="paymentMethod">
+        <option>Cash on Delivery</option>
+        <option>UPI Demo</option>
+        <option>Card Demo</option>
+      </select>
+      <button class="primary-btn full-btn" type="submit">Place Order</button>
+      <p id="checkoutMsg" class="form-message"></p>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
